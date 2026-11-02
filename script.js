@@ -34,3 +34,30 @@ shelters.forEach(shelter=>{
 if(bounds.length)map.fitBounds(bounds,{padding:[40,40],maxZoom:14});
 document.getElementById('shelterCount').textContent=bounds.length;
 document.getElementById('listCount').textContent=bounds.length+' konum';
+
+
+
+/* Mobil menüyü açıp kapat */
+const menuButton = document.querySelector(".menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuButton && mobileMenu) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("is-open");
+
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Menüyü kapat" : "Menüyü aç"
+    );
+  });
+
+  /* Menü bağlantısına basılınca menüyü kapat */
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Menüyü aç");
+    });
+  });
+}
