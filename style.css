@@ -119,3 +119,29 @@ footer{padding:25px 0;border-top:1px solid var(--line)}.footer-inner{display:fle
     transform-origin: center top;
   }
 }
+
+/* Telefonlarda barınak yazısını çizimden ayır */
+@media (max-width: 600px) {
+  .hero-card {
+    min-height: 380px;
+    padding-bottom: 110px;
+  }
+
+  .hero-card-label {
+    bottom: 22px;
+    left: 20px;
+    right: 20px;
+    z-index: 5;
+  }
+
+  .hero-card-label strong,
+  .hero-card-label span {
+    display: block;
+    max-width: 100%;
+  }
+
+  .hero-card .house {
+    transform: translateY(-45px) scale(0.65);
+    transform-origin: center center;
+  }
+}
