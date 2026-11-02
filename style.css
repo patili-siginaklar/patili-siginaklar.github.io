@@ -104,3 +104,18 @@ footer{padding:25px 0;border-top:1px solid var(--line)}.footer-inner{display:fle
 .popup-directions{display:inline-block;margin-top:12px;padding:9px 12px;background:#f47b20;color:white!important;border-radius:9px;font-weight:700}
 .empty-shelters{padding:24px 8px;color:var(--muted);font-size:13px;line-height:1.6}
 @media(max-width:600px){.photo-grid{grid-template-columns:1fr}.photo-card img{height:230px}}
+
+/* Mobilde barınak çizimi ve yazıların çakışmasını önle */
+@media (max-width: 600px) {
+  .hero-card {
+    height: auto;
+    min-height: 300px;
+    padding-bottom: 35px;
+  }
+
+  .hero-card .house {
+    position: relative;
+    transform: scale(0.75);
+    transform-origin: center top;
+  }
+}
