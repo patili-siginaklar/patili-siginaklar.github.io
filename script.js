@@ -1,6 +1,16 @@
 // Gerçek ve doğrulanmış barınaklar hazır olduğunda bu listeye eklenir.
 // Örnek: {name:"Barınak Adı",lat:41.0,lng:29.0,description:"Kısa açıklama"}
-const shelters = [];
+
+const shelters = [
+  {
+    name: "1. Barınak - Gümüşhane Merkez",
+    lat: 40.437711,
+    lng: 39.505150,
+    description: "Harşit Çayı kenarındaki yürüyüş yolunda, demir korkulukların yanında bulunmaktadır. Sokak hayvanları için mama ve temiz su bırakabilirsiniz.",
+    image: "assets/Turuncu İşaretli Barınak Konumu.png"
+  }
+];
+
 const map = L.map("map").setView([39.0, 35.0], 6);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -25,7 +35,22 @@ shelters.forEach(shelter=>{
   const link=document.createElement('a');link.className='popup-directions';link.textContent='🧭 Google Haritalar’da Yol Tarifi Al';
   link.href='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(lat+','+lng);
   link.target='_blank';link.rel='noopener noreferrer';
-  popup.append(title,desc,link);marker.bindPopup(popup);
+ 
+if (shelter.image) {
+  const photo = document.createElement("img");
+  photo.src = shelter.image;
+  photo.alt = shelter.name + " konum fotoğrafı";
+  photo.style.width = "100%";
+  photo.style.maxWidth = "260px";
+  photo.style.borderRadius = "10px";
+  photo.style.margin = "10px 0";
+  photo.style.display = "block";
+  popup.append(title, photo, desc, link);
+} else {
+  popup.append(title, desc, link);
+}
+marker.bindPopup(popup);
+
   const item=document.createElement('div');item.className='shelter-item';
   const name=document.createElement('strong');name.textContent='📍 '+shelter.name;
   const details=document.createElement('p');details.textContent=shelter.description;
