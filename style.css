@@ -198,3 +198,47 @@ footer{padding:25px 0;border-top:1px solid var(--line)}.footer-inner{display:fle
     display: none;
   }
 }
+
+/* Barınak harita bilgi penceresi */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+}
+
+.leaflet-popup-content {
+  width: 230px !important;
+  max-height: 340px;
+  overflow-y: auto;
+  margin: 12px !important;
+}
+
+.leaflet-popup-content img {
+  width: 100% !important;
+  max-width: 210px !important;
+  height: 190px !important;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.leaflet-popup-content .popup-desc {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.leaflet-popup-content .popup-directions {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding: 9px 7px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .leaflet-popup-content {
+    width: 200px !important;
+    max-height: 280px;
+  }
+
+  .leaflet-popup-content img {
+    height: 155px !important;
+  }
+}
