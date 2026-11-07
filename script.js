@@ -15,7 +15,7 @@ const shelters = [
     lat: 40.4362420,
     lng: 39.5082806,
     description: "Harşit Çayı kenarındaki yürüyüş yolunda, demir korkulukların yanında bulunmaktadır. Kırmızı yürüyüş parkurunun yanındaki barınağa mama ve temiz su bırakabilirsiniz.",
-    image: "assets/barinak-2.png"
+    image: "assets/barinak.-2.png"
   }
 ];
 
