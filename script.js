@@ -16,7 +16,15 @@ const shelters = [
     lng: 39.5082806,
     description: "Harşit Çayı kenarındaki yürüyüş yolunda, demir korkulukların yanında bulunmaktadır. Kırmızı yürüyüş parkurunun yanındaki barınağa mama ve temiz su bırakabilirsiniz.",
     image: "assets/barinak.-2.png"
-  }
+  },
+{
+  name: "3. Barınak - Gümüşhane Merkez (A101 Karşısı)",
+  lat: 40.4358628,
+  lng: 39.5127737,
+  description: "A101 marketin hemen karşısında bulunmaktadır. Sokak hayvanları için bu noktaya mama ve temiz su bırakabilirsiniz.",
+  image: "assets/barinak-3.png.png"
+}
+
 ];
 
 
