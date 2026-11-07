@@ -242,3 +242,40 @@ footer{padding:25px 0;border-top:1px solid var(--line)}.footer-inner{display:fle
     height: 155px !important;
   }
 }
+
+/* Telefonlarda barınak bilgi penceresi */
+@media (max-width: 600px) {
+  .leaflet-popup-content {
+    width: 190px !important;
+    max-height: min(300px, 42dvh) !important;
+    overflow-y: auto !important;
+    margin: 10px !important;
+  }
+
+  .leaflet-popup-content img {
+    width: 100% !important;
+    max-width: 190px !important;
+    height: 135px !important;
+    object-fit: contain !important;
+  }
+
+  .leaflet-popup-content .popup-title {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .leaflet-popup-content .popup-desc {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .leaflet-popup-content .popup-directions {
+    font-size: 11px;
+    padding: 8px 5px;
+    white-space: normal;
+  }
+
+  .leaflet-popup-content-wrapper {
+    max-width: calc(100vw - 50px);
+  }
+}
