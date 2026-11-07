@@ -8,8 +8,17 @@ const shelters = [
     lng: 39.505150,
     description: "Harşit Çayı kenarındaki yürüyüş yolunda, demir korkulukların yanında bulunmaktadır. Sokak hayvanları için mama ve temiz su bırakabilirsiniz.",
     image: "assets/Turuncu İşaretli Barınak Konumu.png"
+  
+  },
+  {
+    name: "2. Barınak - Gümüşhane Merkez",
+    lat: 40.4362420,
+    lng: 39.5082806,
+    description: "Harşit Çayı kenarındaki yürüyüş yolunda, demir korkulukların yanında bulunmaktadır. Kırmızı yürüyüş parkurunun yanındaki barınağa mama ve temiz su bırakabilirsiniz.",
+    image: "assets/barinak-2.png"
   }
 ];
+
 
 const map = L.map("map").setView([39.0, 35.0], 6);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
